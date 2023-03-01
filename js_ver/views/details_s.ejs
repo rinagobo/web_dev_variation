@@ -1,0 +1,55 @@
+<%- include("partials/header"); -%>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Rina's Collections</a>
+  <ul class="navbar-nav ml-auto">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/contact">Contact</a>
+  </ul>
+</nav>
+
+<div class="float-container">
+
+  <div class="float-child-s left-s">
+      <figure>
+        <% if (clicked_pic === "details3"){ %>
+          <img class="h-img" src="/images/fam_name.jpg"/>
+          <figcaption>This was a present for my American in-laws.</figcaption>
+        <% } else { %>
+          <img class="h-img" src="/images/miso.png"/>
+          <figcaption>The model was my dog.</figcaption>
+        <% } %>
+      </figure>
+  </div>
+
+  <div class="float-child-s">
+      <% if (clicked_pic === "details3"){ %>
+        <h3>Name with cool Japanese kanji</h3>
+      <% } else { %>
+        <h3>Iconic illustration for your pet</h3>
+      <% } %>
+
+        <div class="float-container">
+
+          <span class="float-child-s mini">
+            Float Column 1
+          </span>
+
+          <span class="float-child-s mini">
+            Float Column 2
+          </span>
+
+          <span class="float-child-s mini">
+            Float Column 3
+          </span>
+
+        </div>
+  </div>
+
+</div>
+
+
+
+
+<%- include("partials/footer"); -%>

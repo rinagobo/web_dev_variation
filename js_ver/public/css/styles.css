@@ -1,0 +1,139 @@
+nav {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: gray;
+  text-align: center;
+}
+
+a:hover {
+  color: #0D4C92;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+  text-align: center;
+}
+
+i {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:5%;
+  padding: 25px 0px 25px 0px;
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  margin: 50px 100px;
+}
+
+.square {
+  aspect-ratio: 1/ 1;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  background: rgb(38,21,79);
+  background: linear-gradient(0deg, rgba(38,21,79,1) 0%, rgba(42,89,101,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfd0f5', endColorstr='#092756',GradientType=1 );
+  color: #fff;
+  border-radius: 8px;
+  transition: .5s ease;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  text-align: center;
+}
+
+.side-ways {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  object-position: center;
+}
+
+.square:hover{
+  opacity: 0.7;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#details {
+	display: none;
+	margin: auto;
+	width: 50%;
+	height: 50%;
+	font-size: 70%;
+}
+
+/*contact page*/
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#contact-form {
+  background-color: #BAD1C2;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 8px;
+}
+
+/*details_v page*/
+.float-container {
+  padding: 20px;
+	margin: 10px;
+}
+
+.left-v {
+	background: rgb(38,21,79);
+  background: linear-gradient(0deg, rgba(38,21,79,1) 0%, rgba(42,89,101,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfd0f5', endColorstr='#092756',GradientType=1 );
+  color: #fff;
+}
+
+.float-child-v {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.float-child-v .mini {
+	  margin: 50px;
+}
+
+/*details_s page*/
+.left-s {
+	background: rgb(38,21,79);
+  background: linear-gradient(0deg, rgba(38,21,79,1) 0%, rgba(42,89,101,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfd0f5', endColorstr='#092756',GradientType=1 );
+  color: #fff;
+}
+
+.float-child-s {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.float-child-s .mini {
+	  margin: 50px;
+}

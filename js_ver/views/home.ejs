@@ -1,0 +1,50 @@
+<%- include("partials/header"); -%>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Rina's Collections</a>
+  <ul class="navbar-nav ml-auto">
+    <a class="nav-link" href="/contact">Contact</a>
+  </ul>
+</nav>
+
+<div class="title">
+  <h2> Japanese Calligraphy by Rina </h2>
+</div>
+
+<form action="/details" method="post">
+  <div class="grid">
+    <div class="square">
+      <img class="up-right" src="/images/engraving.jpg">
+      <button type="submit" class="btn btn-info" name="details" value="details1" id="details">Details</button>
+    </div>
+    <div class="square">
+      <img class="up-right" src="/images/poet.jpg">
+      <button type="submit" class="btn btn-info" name="details" value="details2" id="details">Details</button>
+    </div>
+    <div class="square">
+      <img class="side-ways" src="/images/fam_name.jpg">
+      <button type="submit" class="btn btn-info" name="details" value="details3" id="details">Details</button>
+    </div>
+    <div class="square">
+      <img class="side-ways" src="/images/miso.png">
+      <button type="submit" class="btn btn-info" name="details" value="details4" id="details">Details</button>
+    </div>
+  </div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+  $(".square").on('mouseenter', function(e){
+      $(this).find("img").hide();
+      $(this).find(".btn-info").show();
+  }).on('mouseleave', function(e){
+      $(this).find(".btn-info").hide();
+      $(this).find("img").show();
+  });
+</script>
+
+
+
+<%- include("partials/footer"); -%>

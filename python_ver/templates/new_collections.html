@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Rina's Collections</a>
+    <ul class="navbar-nav ml-auto">
+      <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+    </ul>
+  </nav>
+
+  <div class="title">
+    <h2> Japanese Calligraphy by Rina </h2>
+  </div>
+
+  <div class="grid">
+    <div class="square">
+      <img class="up-right" src="{{url_for('static', filename='images/engraving.jpg')}}">
+      <button type="button" class="btn btn-info" id="details1">Details</button>
+    </div>
+    <div class="square">
+      <img class="up-left" src="{{url_for('static', filename='images/poet.jpg')}}">
+      <button type="button" class="btn btn-info" id="details2">Details</button>
+    </div>
+    <div class="square">
+      <img class="side-ways" src="{{url_for('static', filename='images/fam_name.jpg')}}">
+      <button type="button" class="btn btn-info" id="details3">Details</button>
+    </div>
+    <div class="square">
+      <img class="side-ways" src="{{url_for('static', filename='images/miso.png')}}">
+      <button type="button" class="btn btn-info" id="details4">Details</button>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    $(".square").on('mouseenter', function(e){
+    $(this).find("img").hide();
+    $(this).find(".btn-info").show();
+    }).on('mouseleave', function(e){
+    $(this).find(".btn-info").hide();
+    $(this).find("img").show();
+    });
+  </script>
+</body>
+
+{% include 'footer.html' %}
