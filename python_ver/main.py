@@ -4,6 +4,7 @@ import smtplib
 ### Email address and password for sending an email function ###
 OWN_EMAIL = ""
 OWN_PASSWORD = ""
+TO_EMAIL = ""
 
 ### Set Flask Server ###
 app = Flask(__name__)
@@ -30,7 +31,7 @@ def send_email(name, email, phone, message):
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(user=OWN_EMAIL, password=OWN_PASSWORD)
-        connection.sendmail(from_addr=OWN_EMAIL, to_addrs="", msg=email_message)
+        connection.sendmail(from_addr=OWN_EMAIL, to_addrs=TO_EMAIL, msg=email_message)
         print("Success!")
 
 if __name__ == "__main__":

@@ -6,6 +6,11 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const nodemailer = require('nodemailer');
 
+//Email address and password for sending an email function
+OWN_EMAIL = ""
+OWN_PASSWORD = ""
+TO_EMAIL = ""
+
 //Create express server
 const app = express();
 
@@ -38,14 +43,14 @@ app.post("/contact", function(req, res){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: '',
-      pass: ''
+      user: OWN_EMAIL,
+      pass: OWN_PASSWORD
     }
   });
 
   var mailOptions = {
-    from: '',
-    to: '',
+    from: OWN_EMAIL,
+    to: TO_EMAIL,
     subject: 'Sending Email using Node.js',
     text: text
   };
