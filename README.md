@@ -38,6 +38,14 @@ OWN_PASSWORD = ""
 TO_EMAIL = ""
 
 ```
+3. Include your images file in the file called "images" Use your own image resource in these <img> tags.
+
+```
+ <img class="up-right" src="{{url_for('static', filename='images/yours1.jpg')}}">
+ <img class="up-left" src="{{url_for('static', filename='images/yours2.jpg')}}">
+ <img class="side-ways" src="{{url_for('static', filename='images/yours3.jpg')}}">
+ <img class="side-ways" src="{{url_for('static', filename='images/yours4.png')}}">
+```
 
 ## Contact
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) 
